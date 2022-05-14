@@ -3,7 +3,7 @@ class PrintSudoku:
     def __init__(self):
         return
 
-    def print(puzzle):
+    def printSudoku(puzzle):
         print()
         for i in range(len(puzzle)):
             print(puzzle[i], end =" ")
