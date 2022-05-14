@@ -1,1 +1,4 @@
 sudoku.csv
+.DS_Store
+/.idea
+/__pycache__
