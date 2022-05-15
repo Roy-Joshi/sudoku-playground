@@ -1,12 +1,8 @@
 from sudoku_file_input import SudokuFileInput
-from print_sudoku import PrintSudoku
-import time
+from sudoku_game import SudokuGame
 
 
-startTime = time.time()
+sudokus = SudokuFileInput(10)
 
-puzzles = SudokuFileInput(10)
-PrintSudoku.printSudoku(puzzles.sudoku_puzzles[0])
-
-executionTime = (time.time() - startTime)
-print('Execution time in seconds: ' + str(executionTime))
+game = SudokuGame(sudokus.sudoku_puzzles[0], sudokus.sudoku_solutions[0])
+game.PlayGame(3)
