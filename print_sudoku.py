@@ -16,5 +16,4 @@ class PrintSudoku:
                 print ("|", end=' ')
             if (i + 1) % 27 == 0:
                 print ("    ---------------------")
-
         print()

@@ -8,12 +8,12 @@ class SudokuPuzzle:
         self.solution = solution
         self.emptyCells = puzzle.count(0);
 
-    # return 0 for correct, 1 for incorrect, -1 for error
+    # return 0 for correct, 1 for incorrect, -1 for invalid input
     def updatePuzzle(self, row, column, digit):
         if row > 9 or row <= 0:
             print("Row is invalid. Must between 1-9")
             return -1
-        if column > 9 or row <= 0:
+        if column > 9 or column <= 0:
             print("Column is invalid. Must between 1-9")
             return -1
         if digit > 9 or digit <= 0:
@@ -22,7 +22,7 @@ class SudokuPuzzle:
 
         position = 9 * (row - 1) + (column - 1)
         if self.puzzle[position] != 0:
-            print("Position based on row and column is filled")
+            print("Position based on row and column is already filled")
             return -1
 
         if self.solution[position] != digit:
